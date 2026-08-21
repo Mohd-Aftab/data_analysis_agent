@@ -1,0 +1,259 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #0b1020;
+  color: #e5eefc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(58, 91, 180, 0.25), transparent 30%),
+    linear-gradient(180deg, #0b1020 0%, #111827 100%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8fb4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #b7c5dd;
+  font-size: 1rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.form-card {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: grid;
+  gap: 8px;
+}
+
+.input-group label,
+.label {
+  color: #9fb0cf;
+  font-size: 0.9rem;
+}
+
+input[type="file"],
+textarea {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5eefc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.file-meta {
+  display: flex;
+  gap: 14px;
+  color: #d3def2;
+  font-size: 0.92rem;
+}
+
+.primary-button {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #4f7cff, #7c5cff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.error-card {
+  border-color: rgba(248, 113, 113, 0.4);
+  margin-bottom: 24px;
+}
+
+.results-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.section-header h2,
+.error-card h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.key-value-grid,
+.stats-grid,
+.split-columns,
+.charts-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.key-value-grid,
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.split-columns {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 18px 0;
+}
+
+.stat-card {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.45);
+}
+
+strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.05rem;
+}
+
+ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.code-block,
+.table-metrics {
+  margin: 8px 0 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.7);
+  color: #d9e5fb;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  vertical-align: top;
+}
+
+.best-row {
+  background: rgba(79, 124, 255, 0.12);
+}
+
+.best-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.2);
+  color: #9fd1ff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.charts-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.chart-card {
+  margin: 0;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(2, 6, 23, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.chart-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  background: white;
+}
+
+.chart-card figcaption {
+  margin-top: 10px;
+  color: #b7c5dd;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.insights-block + .insights-block {
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 20px 14px 40px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}
