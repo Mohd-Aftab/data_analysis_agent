@@ -28,3 +28,8 @@ def route_after_ml(state: AgentState):
         return "error"
 
     return "visualization"
+
+def route_after_feature_engineering(state: AgentState):
+    if state.get("intent") == "prediction":
+        return "ml"
+    return "insights"

@@ -92,7 +92,9 @@ def _build_response(result: dict[str, Any]) -> dict[str, Any]:
         "best_model": result.get("best_model"),
         "model_metrics": result.get("model_metrics"),
         "visualization_plan": result.get("visualization_plan"),
-        "chart_paths": _normalize_chart_paths(result.get("chart_paths")),
+        "chart_paths": _normalize_chart_paths(
+            result.get("chart_paths") or result.get("chart_path")
+        ),
         "insights": result.get("insights"),
         "error": result.get("error"),
     }

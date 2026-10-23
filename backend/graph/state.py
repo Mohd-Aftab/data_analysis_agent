@@ -30,8 +30,8 @@ class AgentState(TypedDict):
     prediction_summary: Optional[dict]
     error: Optional[str]
     
-    insights: Optional[list[str]]
-    chart_path:Optional[list[str]]
+    insights: Optional[dict]
+    chart_paths: Optional[list[str]]
     
     
     # message : str 

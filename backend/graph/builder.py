@@ -3,7 +3,7 @@ from langgraph.graph import StateGraph, START, END
 
 from graph.state import AgentState
 
-from graph.edges import route_after_ml, route_from_planner, route_from_profiling
+from graph.edges import route_after_feature_engineering, route_after_ml, route_from_planner, route_from_profiling
 
 from agents.planner import planner_node
 from agents.preprocessing import preprocessing_node
@@ -36,7 +36,10 @@ builder.add_conditional_edges(
 )
 
 builder.add_edge("preprocessing", "feature_engineering")
-builder.add_edge("feature_engineering", "ml")
+builder.add_conditional_edges(
+    "feature_engineering",
+    route_after_feature_engineering,
+)
 builder.add_conditional_edges(
     "ml", 
     route_after_ml
